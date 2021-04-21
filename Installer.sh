@@ -30,6 +30,8 @@ timedatectl status
   
 echo -e "Please enter hostname"
 read hostname
+echo -e "Plase eneter root password"
+read root_password
 echo -e "Please enter username ( all must be lower ):" 
 read username
 echo -e "Please enter $username password:"
