@@ -19,12 +19,6 @@ __      __                     _      _
             |___/
 {$CLS}"
 
-RRD="\e[31m"
-RED="\e[91m"
-CYN="\e[94m"
-YLL="\e[93m"
-CLS="\e[m"
-
 echo -e "${RED}This is a base installer not %100 secure... do not run it in your main pc${CLS}"
 echo "\n\n"
 echo "Plase insert keyboard type ( en - de - it... )"
@@ -107,8 +101,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager --noconfirm
 systemctl enable NetworkManager
 exit
+EEOF
 umount -l /mnt
 echo -e "Be sure to remove Installation Driver before reboot ( 5 seconds )"
 sleep 5
 poweroff
-EEOF
