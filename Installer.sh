@@ -86,7 +86,7 @@ touch /etc/hostname
 echo -e "$hostname" > /etc/hostname
 echo -e "\n127.0.0.1    localhost\n::1      localhost\n127.0.1.1    $hostname.localdomain   $hostname" >> hello
 echo -e "Please insert root password:"
-passwd
+echo "$root_password" | passwd --stdin
 useradd -m "$username"
 echo "$user_password" | passwd "$username" --stdin
 usermod -aG wheel,audio,video,optical,storage "$username"
