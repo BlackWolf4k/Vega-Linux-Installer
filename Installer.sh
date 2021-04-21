@@ -106,3 +106,5 @@ exit
 EEOF
 umount -l /mnt
 echo -e "Be sure to remove Installation Driver before reboot ( 5 seconds )"
+sleep 5
+poweroff
