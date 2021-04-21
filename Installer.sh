@@ -82,7 +82,7 @@ arch-chroot /mnt <<EEOF
 ln -sf /usr/share/zoneinfo/${TimeZone} /etc/localtime
 hwclock --systohc
 pacman -S nano --noconfirm
-sed 's/# #it_IT.UTF-8 UTF-8/it_IT.UTF-8 UTF-8/' /etc/locale.gen
+sed -i 's/#it_IT.UTF-8 UTF-8/it_IT.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 touch /etc/hostname
 echo -e "$hostname" > /etc/hostname
@@ -93,7 +93,7 @@ useradd -m "$username"
 echo "$user_password" | passwd "$username" --stdin
 usermod -aG wheel,audio,video,optical,storage "$username"
 pacman -S sudo --noconfirm
-sed 's/# #%wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' visudo
+sed -i 's/#%wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' visudo
 pacman -S grub --noconfirm
 pacman -S  efibootmgr dosfstools os-prober mtools --noconfirm
 mkdir /boot/EFI
