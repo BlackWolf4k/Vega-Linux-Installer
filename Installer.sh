@@ -19,7 +19,7 @@ __      __                     _      _
             |___/
 ${CLS}"
 
-echo -e "${RED}This is a base installer not %100 secure... do not run it in your main pc${CLS}"
+echo -e "${RED}This is a base installer not %100 secure... do not run it in your main pc\nTHIS WORK ONLY IN ${CLS}'${YLL}EFI${CLS}'"
 echo "\n\n"
 echo "Plase insert keyboard type ( en - de - it... )"
 read keyboard
