@@ -91,7 +91,7 @@ useradd -m "$username"
 echo -e "${user_password}\n${user_password}" | passwd "${username}"
 usermod -aG wheel,audio,video,optical,storage "${username}"
 pacman -S sudo --noconfirm
-sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers.d
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 pacman -S grub --noconfirm
 pacman -S  efibootmgr dosfstools os-prober mtools --noconfirm
 mkdir /boot/EFI
