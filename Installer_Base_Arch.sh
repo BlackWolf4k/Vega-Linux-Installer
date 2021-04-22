@@ -8,19 +8,7 @@ CYN="\e[94m"
 YLL="\e[93m"
 CLS="\e[m"
 
-echo -e "${CYN}
-__      __                     _      _ 
-\ \    / /                    | |    (_) 
- \ \  / /__  __ _  __ _ ______| |     _ _ __  _   ___  __
-  \ \/ / _ \/ _' |/ _' |______| |    | | '_ \| | | \ \/ /
-   \  /  __/ (_| | (_| |      | |____| | | | | |_| |>  < 
-    \/ \___|\__, |\__,_|      |______|_|_| |_|\__,_/_/\_\ 
-             __/ |
-            |___/
-${CLS}"
-
-echo -e "${RED}This is a base installer not %100 secure... do not run it in your main pc\nTHIS WORK ONLY IN ${CLS}'${YLL}EFI${CLS}'"
-echo -e "\n\n"
+echo -e "${RED}This is a base installer not %100 secure... do not run it in your main pc\nTHIS WORK ONLY IN ${CLS}'${YLL}EFI${CLS}'\n\n"
 echo "Plase insert keyboard type ( en - de - it... )"
 read keyboard
 loadkeys "$keyboard"
