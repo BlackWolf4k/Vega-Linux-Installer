@@ -17,7 +17,7 @@ __      __                     _      _
     \/ \___|\__, |\__,_|      |______|_|_| |_|\__,_/_/\_\ 
              __/ |
             |___/
-{$CLS}"
+${CLS}"
 
 echo -e "${RED}This is a base installer not %100 secure... do not run it in your main pc${CLS}"
 echo "\n\n"
@@ -25,27 +25,27 @@ echo "Plase insert keyboard type ( en - de - it... )"
 read keyboard
 loadkeys "$keyboard"
   
-timedatectl set-ntp true
-timedatectl status
-  
-echo -e "Please enter hostname"
+echo -e "${CYN}Please enter${CLS} ${YLL}hostname${CLS}:"
 read hostname
-echo -e "Plase eneter root password"
+echo -e "${CYN}Plase eneter${CLS} ${YLL}root password${CLS}:"
 read root_password
-echo -e "Please enter username ( all must be lower ):" 
+echo -e "${CYN}Please enter${CLS} ${YLL}username${CLS}: ( all must be lower ):" 
 read username
-echo -e "Please enter $username password:"
+echo -e "${CYN}Please enter${CLS} ${YLL}$username password${CLS}:"
 read user_password
 echo -e "$user_password"
-echo -e "Plase insert Regione and City in the following way: America/Chicago | Europe/Rome )"
+echo -e "Plase insert ${YLL}Regione and City${CLS} in the following way: America/Chicago | Europe/Rome )"
 read TimeZone
-
 echo -e "${YLL}Plase chooese the disk:${CLS}"
 fdisk -l 
 echo -e "${RRD}BE CAREFULL, YOU ARE GOING TO FORMATE THE SELECTED DISK ( /dev/sda if only 1 disk EMPTY )${CLS}"
 read disk
 fdisk "$disk"
 
+timedatectl set-ntp true
+timedatectl status
+
+echo -e "${RRD}PLASE PRESS CTRL+C THEN ENTER${CLS}"
 fdisk ${disk} <<EEOF
 g
 n
