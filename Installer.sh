@@ -74,7 +74,6 @@ mkswap ${disk}2
 swapon ${disk}2
 mkfs.ext4 ${disk}3
 mount ${disk}3 /mnt
-echo -e "${YLL}If hask leave default config ( press enter ) and type y${CLS}\n${CYN}This operation can take some minutes${CLS}"
 pacstrap /mnt base linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -87,7 +86,6 @@ locale-gen
 touch /etc/hostname
 echo -e "$hostname" > /etc/hostname
 echo -e "\n127.0.0.1    localhost\n::1      localhost\n127.0.1.1    $hostname.localdomain   $hostname" >> /etc/hosts
-echo -e "Please insert root password:"
 echo -e "${root_password}\n${root_password}" | passwd
 useradd -m "$username"
 echo -e "${user_password}\n${user_password}" | passwd "${username}"
