@@ -89,9 +89,9 @@ echo -e "\n127.0.0.1    localhost\n::1      localhost\n127.0.1.1    $hostname.lo
 echo -e "${root_password}\n${root_password}" | passwd
 useradd -m "$username"
 echo -e "${user_password}\n${user_password}" | passwd "${username}"
-usermod -aG wheel,audio,video,optical,storage "$username"
+usermod -aG wheel,audio,video,optical,storage "${username}"
 pacman -S sudo --noconfirm
-sed -i 's/#%wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' visudo
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' visudo
 pacman -S grub --noconfirm
 pacman -S  efibootmgr dosfstools os-prober mtools --noconfirm
 mkdir /boot/EFI
