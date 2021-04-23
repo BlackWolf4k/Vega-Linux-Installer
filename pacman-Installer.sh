@@ -1,7 +1,7 @@
 #!/bin/sh
 #Version 0.0.1Alpha
 
-PACKAGES={
+PACKAGES=(
 
 	#Gnome
 	'xorg'
@@ -61,7 +61,7 @@ PACKAGES={
 	'leafpad'
 	'wireshark-qt'
 	'libreoffice-fresh'
-}
+)
 
 for package in "${PACKAGES[@]}"
 do
