@@ -63,10 +63,8 @@ PACKAGES={
 	'libreoffice-fresh'
 }
 
-for package in "${PACKAGES}"
+for package in "${PACKAGES[@]}"
 do
 	echo "Installing: ${package}"
 	sudo pacman -S "$package" --noconfirm --needed
 done
-
-echo -e "\nFine\n"
