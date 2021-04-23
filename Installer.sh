@@ -99,7 +99,7 @@ grub-install --target=x86_64-efi --bootloader-id=grub-uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager git --noconfirm
 git clone https://github.com/BlackWolf4k/Vega-Linux-Installer
-cd Vega-Linux-installer
+cd Vega-Linux-Installer
 chmod +x *
 ./pacman-Installer.sh
 exit
