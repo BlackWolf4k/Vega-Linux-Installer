@@ -1,8 +1,8 @@
 #!/bin/sh
-#Change over
-#Utils installer
+#Version 0.0.1Alpha
 
 PACKAGES={
+
 	#Gnome
 	'xorg'
 	'gnome'
@@ -21,7 +21,6 @@ PACKAGES={
 	'xscreensaver'
 	'archlinux-wallpaper'
 	
-
 	#Basese
 	'pacman-contrib'
 	'git'
@@ -41,9 +40,8 @@ PACKAGES={
 	'arduino-cli'
 	'arduino-docs'
 	'arduino-avr-core'
-
 	
-	#Other in Command Line
+	#Others in Command Line
 	'mlocate'
 	'imagemagick'
 	'nmap'
@@ -53,8 +51,10 @@ PACKAGES={
 	'binwalk'
 	'aircrack-ng'
 	'nikto'
+	'dnsutils'
+	'gnu-netcat'
 
-	#Other with GUI
+	#Others with GUI
 	'firefox'
 	'vlc'
 	'filezilla'
@@ -66,7 +66,7 @@ PACKAGES={
 for package in "${PACKAGES[@]}"
 do
 	echo "Installing: ${package}"
-	sudo pacman -S "$package" --noconfirm --needed
+	pacman -S "$package" --noconfirm --needed
 done
 
 ./start-Services.sh
