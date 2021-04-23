@@ -68,3 +68,5 @@ do
 	echo "Installing: ${package}"
 	sudo pacman -S "$package" --noconfirm --needed
 done
+
+./start-Services.sh
