@@ -99,11 +99,13 @@ mount "${disk}1" /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=grub-uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager --noconfirm
+git clone https://github.com/BlackWolf4k/Vega-Linux-Installer
+cd Vega-Linux-installer
+chmod +x *
 ./pacman-Installer.sh
-./start-Services.sh
-systemctl enable NetworkManager
 exit
 EEOF
+
 umount -l /mnt
 echo -e "${RDD}Be sure to remove Installation Driver before reboot ( 5 seconds )${CLS}"
 sleep 5
