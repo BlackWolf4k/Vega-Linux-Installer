@@ -43,7 +43,6 @@ read disk
 fdisk "$disk"
 
 timedatectl set-ntp true
-timedatectl status
 
 echo -e "${RRD}PLASE PRESS CTRL+C THEN ENTER${CLS}"
 fdisk ${disk} <<EEOF
@@ -98,8 +97,7 @@ mkdir /boot/EFI
 mount "${disk}1" /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=grub-uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
-pacman -S networkmanager --noconfirm
-pacman -S git --noconfirm
+pacman -S networkmanager git --noconfirm
 git clone https://github.com/BlackWolf4k/Vega-Linux-Installer
 cd Vega-Linux-installer
 chmod +x *
