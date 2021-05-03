@@ -33,6 +33,7 @@ PACKAGES=(
 	'mysql'
 
 	#Lenguages
+	'vim'
 	'gcc'
 	'code'
 	'php'
