@@ -34,6 +34,7 @@ PACKAGES=(
 
 	#Lenguages
 	'vim'
+	'vi'
 	'gcc'
 	'code'
 	'php'
@@ -58,6 +59,7 @@ PACKAGES=(
 	'gnu-netcat'
 
 	#Others with GUI
+	'glade'
 	'firefox'
 	'vlc'
 	'filezilla'
